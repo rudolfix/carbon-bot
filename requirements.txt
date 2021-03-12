@@ -1,4 +1,5 @@
 # Requirements for the action server should go in action-server-requirements.txt
 -r action-server-requirements.txt
-rasa[convert]==1.10.0
+pip install rasa==1.10.22
+pip install tensorflow_text==2.1.1
 
