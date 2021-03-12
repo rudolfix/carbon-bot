@@ -17,3 +17,22 @@ To update the used Rasa / Rasa X versions please check the following files:
 - `requirements.txt`
 
 **Be Warned** There is a lot of NSFW content in the training data!
+
+# Howto run
+Install dependencies
+```bash
+pip install rasa==1.10.22
+pip install tensorflow_text==2.1.1
+```
+
+Some models were removed and config needs to be changed
+```yaml
+- name: ConveRTTokenizer
+  model_url: https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz
+- name: ConveRTFeaturizer
+  model_url: https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz
+```
+
+# Useful commands
+Run the rasa server: `rasa run --enable-api --endpoints endpoints.yml`
+Run action server: `rasa run actions`
